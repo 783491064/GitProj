@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.tv);
         int a=10;
         int c=30;
+        int b=20;
     }
 
 }
