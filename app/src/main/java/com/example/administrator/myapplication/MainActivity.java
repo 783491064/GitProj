@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = findViewById(R.id.tv);
-        int a=10;
-        int c=30;
-        int b=20;
-        int aaaaa=30;
-        String s="";    }
+        int a = 10;
+        int c = 30;
+        int b = 20;
+        int aaaaa = 30;
+        String s = "";
+    }
+
 }
