@@ -15,5 +15,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tv = findViewById(R.id.tv);
         int b=1;
+        refresh();
+    }
+
+    private void refresh() {
+        finish();
     }
 }
