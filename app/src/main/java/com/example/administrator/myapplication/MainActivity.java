@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         int b=20;
         int dddddd=20;
         int aaaaa=30;
+        String f="aaa";
     }
 
 }
