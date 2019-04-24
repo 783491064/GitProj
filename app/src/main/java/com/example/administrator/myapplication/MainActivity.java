@@ -26,74 +26,10 @@ import java.util.stream.Stream;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tv;
-    private SeniorCropImageView iv;
-    private String savePath;
-    private String filePath;
-    private int [] arr=new int[]{1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5};
-    private ene ene;
-    private String s="你";
-    private String b="好";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tv = findViewById(R.id.tv);
-        iv = (SeniorCropImageView)findViewById(R.id.iv);
-        iv.setCropRatio(5f / 4f);
-        filePath = saveBitmp();
-        tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                iv.setImagePath(filePath);
-            }
-        });
-        Button bt= (Button)findViewById(R.id.bt);
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,DesActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-
-
-    private String saveBitmp() {
-
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.mipmap.ivbg);
-
-        savePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/123.jpg";
-        File file=new File(savePath);
-        if(!file.exists()){
-            try {
-                file.createNewFile();
-                FileOutputStream fos=new FileOutputStream(file);
-                bitmap.compress(Bitmap.CompressFormat.PNG,100,fos);
-                fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return savePath;
-    }
-
-    private List<String> list=new ArrayList<>();
-    public void stream(){
-        for(int i=0;i<10;i++){
-            list.add(i+"");
-        }
-
-    }
-
-    public interface ene{
-        void noty(String s);
-    }
-  public void setListener(ene ene){
-        this.ene=ene;
-
-  }
 
 }
