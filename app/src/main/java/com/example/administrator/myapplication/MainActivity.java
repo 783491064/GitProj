@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private String filePath;
     private int [] arr=new int[]{1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5};
     private ene ene;
+    private String s="你";
+    private String b="好";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
